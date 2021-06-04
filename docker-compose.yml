@@ -1,0 +1,15 @@
+version: '3'
+services:
+  codecept:
+    image: codeception/codeception
+    depends_on:
+      - chrome
+      - web
+    volumes:
+      - .:/project
+  web:
+    image: php:7-apache
+    volumes:
+      - .:/var/www/html
+  chrome:
+    image: selenium/standalone-chrome

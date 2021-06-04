@@ -8,3 +8,11 @@ docker-compose.yml файл запускает следующие контейн
 * Контейнер с PHP (web)
 * Контейнер с selenium сервером, браузером (chrome)
 
+Файлы с тестами в папке `test`
+
+## Запуск
+
+Создает контейнеры и запускает все тесты в папке acceptance
+
+* $ docker-compose up
+* $ docker-compose run --rm codecept run acceptance
